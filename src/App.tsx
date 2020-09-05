@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 
-import { Router } from 'react-router-dom'
-
-import history from './services/history'
+import { HashRouter } from 'react-router-dom'
 
 import Routes from './routes'
 
@@ -29,9 +27,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Main>
-        <Router history={history}>
+        <HashRouter>
           <Routes />
-        </Router>
+        </HashRouter>
       </Main>
     </ThemeProvider>
   );
