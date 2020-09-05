@@ -45,9 +45,11 @@ export default function TodoTable() {
 
     useEffect(() => {
         const localItems = JSON.parse(localStorage.getItem('items') || '{}')
-        if (!(items.length === localItems.length && items.every((value, index) => value === localItems[index])) //Check if there's something to grab from local storage
-        ) {
-            setItems(localItems)
+        if (Array.isArray(items) && items.length) {
+            if (!(items.length === localItems.length && items.every((value, index) => value === localItems[index])) //Check if there's something to grab from local storage
+            ) {
+                setItems(localItems)
+            }
         }
     }, [items])
 
@@ -83,14 +85,14 @@ export default function TodoTable() {
             <Hr />
 
             {
-                items.map((item, i) => {
+                Array.isArray(items) && items.length ? items.map((item, i) => {
                     return (
                         <Row>
                             <Cell>{item}</Cell>
                             <ButtonComponent onClick={() => handleCompletedClick(item)}> Finished </ButtonComponent>
                         </Row>
                     )
-                })
+                }) : null
             }
 
             <Hr />
