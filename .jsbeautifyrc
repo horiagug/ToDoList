@@ -1,0 +1,28 @@
+{
+  "html": {
+    "brace_style": "collapse",
+    "indent_char": " ",
+    "indent_scripts": "normal",
+    "indent_size": 2,
+    "wrap_indent": 8,
+    "wrap_line_length": 80,
+    "max_preserve_newlines": 1,
+    "preserve_newlines": true,
+    "unformatted": ["a", "sub", "sup", "b", "i", "u"]
+  }
+}
+# ./.prettierrc
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
+}
+# ./.prettierignore
+dist
+vendor
+utils/scaffolds
