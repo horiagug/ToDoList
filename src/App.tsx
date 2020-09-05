@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import styled, { ThemeProvider } from 'styled-components'
 
 import { Router } from 'react-router-dom'
